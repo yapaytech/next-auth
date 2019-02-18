@@ -1,3 +1,4 @@
+const regeneratorRuntime = require("regenerator-runtime");
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('babel-polyfill'), require('isomorphic-fetch')) :
   typeof define === 'function' && define.amd ? define(['exports', 'babel-polyfill', 'isomorphic-fetch'], factory) :
