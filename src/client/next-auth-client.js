@@ -21,7 +21,7 @@ export default class {
     if (req) {
       if (req.session) {
         // If running on the server session data should be in the req object
-        session.csrfToken = req.connection._httpMessage.locals._csrf
+        if(req.connection._httpMessage) session.csrfToken = req.connection._httpMessage.locals._csrf
         session.expires = req.session.cookie._expires
         // If the user is logged in, add the user to the session object
         if (req.user) {
